@@ -6,6 +6,6 @@ package "docker.io" do
   action :install
 end
 
-execute "install logrotate" do
-  command "sudo aptitude install logrotate"
+package logrotate do
+  action :install
 end
