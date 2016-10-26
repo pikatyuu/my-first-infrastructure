@@ -6,6 +6,12 @@ package "docker.io" do
   action :install
 end
 
-package logrotate do
-  action :install
+execute "install logrotate" do
+  command "aptitude install logrotate"
+end
+
+template "/etc/logrotate.d" do
+  source "./docker"
+  owner "root"
+  group "root"
 end
