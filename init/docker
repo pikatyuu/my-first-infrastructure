@@ -1,7 +1,7 @@
-/var/lib/docker/containers/*/*-json.log
+/var/log/upstart/docker.log
 {
   rotate 3
-  daily
+  weekly
   missingok
   compress
   delaycompress
