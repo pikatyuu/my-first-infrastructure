@@ -10,8 +10,8 @@ execute "install logrotate" do
   command "aptitude install logrotate"
 end
 
-execute "remove all file on /etc/logrotate.d except apt file" do
-  command "rm `ls /etc/logrotate.d -I apt`"
+execute "remove all file on /etc/logrotate.d" do
+  command "rm /etc/logrotate.d/*"
 end
 
 template "/etc/logrotate.d" do
