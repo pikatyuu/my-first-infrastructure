@@ -1,0 +1,35 @@
+/var/log/syslog
+{
+  rotate 10
+  daily
+  missingok
+  delycompress
+  compress
+  notifempty
+}
+
+/var/log/dpkg.log
+{
+  rotate 7
+  daily
+  missingok
+  delaycompress
+  compress
+  notifempty
+}
+
+/var/log/auth.log
+{
+  rotate 4
+  weekly
+  missingok
+  delaycompress
+  compress
+  notifempty
+}
+
+/var/log/kern.log
+{
+  rotate 0
+  weekly
+}
